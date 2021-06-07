@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Andika+New+Basic:ital@1&family=Langar&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+
+	<title>Idade Corrigida - UNEB</title>
+	<style>
+		* {
+    margin: 0;
+    padding: 0;
+	}
+	html{height:10%;}
+		body{height:100%;
+		min-height: 100%;}
+		
+		.general{
+		position:relative;
+		height: 100%;
+		width: 100%;
+		min-height:100%;
+		padding: 0px;
+		margin: 0px;
+		}
+		
+		h1 {
+			font-family: 'Roboto', Arial;
+			font-size: 50pt;
+			color: #2C5FAC;
+			position: absolute;
+			left: 154px;
+			top: 14px;
+			padding: 0px;
+			margin-top: 0px;
+			
+			}
+		h2 {
+			font-family: Helvetica;
+			font-size: 18pt;
+			color: #951ABE;
+			position: absolute;
+			left:158px;
+			top: 100px;
+			
+			}
+		
+		p {
+			font-family: Arial;
+			font-size: 15pt;
+			color: black;
+			position:relative;
+			left:11px;
+		}
+		fieldset {
+			font-family: Arial;
+			font-size: 16pt;
+			color: black;
+			position:relative;
+			left:11px;
+			width: 250px;
+			top: 145px;
+			border: 2px solid #0066B3;
+			padding-bottom: 0px;
+			margin-top: 10px;
+			border-radius: 10px;
+			background-color: white;
+		}
+		img{
+			position: absolute;
+			top:15px;
+			left: 10px;
+			margin: 0px;
+			margin-top:0px;
+			padding: 0px;
+		}
+		
+		body{
+		background-color: #f9fcff
+		}
+			
+				
+		
+		
+			
+		
+		p#copyright{
+		font: normal 16pt Arial;
+		color:white;
+		text-align:center;
+		}
+		
+		
+		
+		p#pri{
+		width: 120%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		}
+		p#pri2{
+		width: 120%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		}
+		p#pri3{
+		width: 120%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		}
+		p#pri4{
+		width: 120%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		}
+		p#pri5{
+		width: 120%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		}
+		p#pri6{
+		width: 100%;
+		font-size:22pt;
+		color: #3d3a3a;
+		
+		
+		}
+		
+		input#cVolp{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		
+		border-radius: 5px;
+		margin-bottom: 15px;
+		margin-top: 2px;
+		}
+		input#cConcp{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		
+		border-radius: 5px;
+		margin-top: 2px;
+		}
+		input#cVold{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		background-color: #d9d9d9;
+		border-radius: 5px;
+		margin-bottom: 15px;
+		margin-top: 2px;
+		}
+		input#cConcd{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		
+		border-radius: 5px;
+		margin-top: 2px;
+		}
+		input#cVola{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		
+		border-radius: 5px;
+		margin-bottom: 15px;
+		margin-top: 2px;
+		}
+		input#cConca{
+		width: 70%;
+		height:50px;
+		font-size: 30px;
+		
+		border-radius: 5px;
+		margin-top: 2px;
+		}
+		
+		p#obs{
+		color: #3d3a3a;
+		}
+		
+		
+		
+		
+
+		
+
+		a{
+		text-decoration: none;
+		font-size: 16px;
+		color:  #2c5fac;
+		background-color: white;
+		padding: 19px 27px;
+		border-style: solid;
+		border-width: 2px;
+		border-top-color: #337FED;
+		border-right-color: #337FED;
+		border-bottom-color: #337FED;
+		border-left-color: #337FED;
+		
+		border-radius: 29px;
+		margin-right: 15px;
+		cursor: pointer;
+		}
+		
+		
+		
+		input#cVolp:not(:placeholder-shown) {
+      border-color: green;
+	  }
+
+	input#cConcp:not(:placeholder-shown) {
+      border-color: green;
+    }
+	
+		
+	input#cConcd:not(:placeholder-shown) {
+      border-color: green;
+    }
+	
+	input#cVola:not(:placeholder-shown) {
+      border-color: green;
+    }
+	
+	input#cConca:not(:placeholder-shown) {
+      border-color: green;
+    }
+	input:placeholder-shown {
+      border-color: #BC00FA;
+    }
+	
+	.cabecalho{
+	top: 0px;
+	width: 101%;
+	left: 0px;
+	background-color: #ffffff;
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	position: relative;
+	height: 150px;
+	display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		margin-top: 0px;
+		margin-bottom: 5px;
+		box-shadow: 0px 3px 2px #888888;
+	}
+	
+	.flex-box {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		 background-color: #951ABE;
+		 width: 100%;
+		 height: 99%;
+		}
+	
+		
+	.form{
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	align-items: center;
+	width: 40%;
+	height: 100%;
+	float: left;
+	padding: 0px;
+	
+	top: 10px;
+	margin-top: 0px;
+	}
+	
+	
+	
+	#div{
+	position: relative;
+	display: flex;
+	float: right;
+	align-items: center;
+	width: 55%;
+	height: 95%;
+	min-width: 500px;
+	margin-top: 0px;	
+	top: 0px;
+	}
+	
+	textarea#textarea{
+		
+		
+		line-height:150px;
+		width: 90%;
+		height: 90%;
+		font: normal 30pt Arial;
+		color: #27314d;
+		border-radius: 5px;
+		line-height: 2em;
+		text-shadow: 0.5px 0.5px 0.5px black;
+		padding-left: 25px;
+		}
+		
+		input#caixai{
+		display: none;
+		text-align:center;
+		top:40px;
+		width: 1%;
+		height:4px;
+		font: normal 11pt Arial
+		}
+		
+		.fieldset{
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		width: 100%;
+		margin-left:0px;
+		height: 750px;
+		padding: 5px;
+		box-sizing: border-box;
+		margin: 0px:
+		border-radius: 25px;
+		top:0px;
+		
+		}
+		
+		#flexform{
+		display: flex;
+		  align-items: center;
+		  justify-content: space-around;
+		 background-color: #f9fcff;
+		 width: 100%;
+		 height:900px;
+		 
+		}
+		
+		#fCalculo{
+		position: relative;
+		margin-top: 0px;
+		padding: 0px;
+		top: 0px;
+		width: 90%;
+		height: 90%;
+		}
+		
+		fieldset{
+		top: 35px;
+		padding: 20px;
+		margin-bottom: 10px;
+		margin-left: 0px;
+		margin-right: 0px;
+		width: calc(100% - 40px);
+		min-width: 250px;
+		left: 0px;
+		}
+		
+		footer{
+			position: relative;
+			font-family: Arial;
+			font-size: 15pt;
+			font-weight: bold;
+			color: white;
+			text-shadow: 0.5px 0.5px 0px gray;
+			bottom:0;
+			width:100%;
+			left: 0px;
+			right: 0px;
+			min-width: 100%;
+			background-color: #0066B3;
+			
+			padding-top: 15px;
+			padding-bottom: 15px;
+			text-align: center;
+			margin: 0;
+			border: 0;
+			top: calc(100%);
+			}
+		
+		.footer{
+		position: relative;
+		padding:0px;
+		margin: 0px;
+		display: flex;
+		align-items: center;
+		left: 0px;
+		bottom: 0px;
+		float: bottom;
+		}
+			
+		
+		#lastupdated{
+		font-family: Consolas, arial;
+		color: gray;
+		font-size: 0.8em;
+		font-style: italic;
+		}
+		
+		#obs{
+		margin-left: 10px;
+		}
+		
+		#links{
+		margin-left: 10px;
+		}
+		
+		legend{
+		text-shadow: 0.5px 0.5px 0.5px black;
+		}
+		
+		input.dia{
+		width: 70px;
+		height: 40px;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 18pt;
+		margin-bottom: 15px;
+		}
+		
+		input.mes{
+		width: 70px;
+		height: 40px;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 18pt;
+		margin-bottom: 15px;
+		}
+		
+		input.ano{
+		width: 120px;
+		height: 40px;
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 15px;
+		font-size: 18pt;
+		}
+		
+		#input1ign{
+		width: 90px;
+		height: 40px;
+		text-align: center;
+		margin-top: 10px;
+		font-size: 18pt;
+		margin-bottom: 15px;
+		}
+		
+		#autoria{
+		display: block;
+		width: 70%;
+		font-family: Consolas, arial;
+		font-size: 11pt;
+		left: 10px;
+		margin-left: 10px;
+		margin-right: 15px;
+		}
+		
+	</style>
+	
+	
+	
+</head>
+<body>
+
+<script>
+window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins que leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis no nosso site), que atende aos pré-requisitos neles dispostos e que cumprirá os termos neles acordados e que aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
+</script>
+<div class="general">
+<div class="cabecalho">
+	<hgroup>
+	<h1 id="h1">Idade Corrigida - UNEB</h1> 
+	<h2>Correção da Idade da Criança Nascida Pré-termo</h2>
+	</hgroup>
+	<img src="logo.png"
+	alt="Logotipo"
+	width="120px"
+	>
+</div>	
+
+<div class="flex-box container-box" id="flexform">
+<div class="form">
+
+		<form method="get" id="fCalculo" action="none" oninput="resultado()"  onchange="resultado()" onclick="resultado()">
+			
+			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<p id="pri"><label for="cVolp"><b>Data do atendimento: </b></label></br><input class="dia" id="input1da" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2da" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3da" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
+			</fieldset>
+			
+			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<p id="pri2"><label for="cConcp"><b>Data do nascimento: </b></label></br> <input id="input1dn" class="dia" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2dn" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3dn" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
+						
+						
+			</fieldset>
+			
+			
+			
+			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<p id="pri5"><label for="cVola"><b>IG ao nascimento: </b></label></br> <input class="dia" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28"></input> semanas</p>
+			</fieldset>
+			<br>
+				
+		</form>
+		
+</div>		
+		<input type="text" name="caixan" id="caixai" value="<<REENCHA OS CAMPOS AO LADO" readonly />
+		
+	<div id="div">
+	<div class="flex-box">
+	<textarea id="textarea"  readonly ><<PREENCHA OS CAMPOS AO LADO </textarea>
+	</div>
+	</div>
+</div>	
+	
+	
+	<script>
+		function resultado() {
+		//SELEÇÃO
+		let input1da = document.getElementById('input1da');
+		let input2da = document.getElementById('input2da');
+		let input3da = document.getElementById('input3da');
+		
+		let input1dn = document.getElementById('input1dn');
+		let input2dn = document.getElementById('input2dn');
+		let input3dn = document.getElementById('input3dn');
+		
+		let input1ign = document.getElementById('input1ign');
+				
+		//ATRIBUIÇÃO DE VALOR
+		input1da = input1da.value; //dia atendimento
+		input2da = input2da.value; //mes atendimento
+		input3da = input3da.value; // ano atendimento
+		
+		input1dn = input1dn.value; //dia nascimento
+		input2dn = input2dn.value; //mes nascimento
+		input3dn = input3dn.value; //ano nascimento
+					
+		input1ign = input1ign.value; //dia dum
+				
+		// FORMATAÇÃO DE DATA AAAA/MM/DD
+		let dtatendimento = input3da + '/' + input2da + '/' + input1da;
+		let dtnascimento = input3dn + '/' + input2dn + '/' + input1dn;
+						
+		dtatendimento = new Date(dtatendimento);
+		dtnascimento = new Date(dtnascimento);
+		
+		
+		//CÁLCULO
+		let cronoaged = dtatendimento.getTime() - dtnascimento.getTime()// Idade cronológica em milesegundos
+			
+		cronoaged = (cronoaged /(1000 * 60 * 60 * 24)); // Idade cronológica em dias
+		
+		let cronoages = parseInt(cronoaged/7); // Idade cronológica em semanas
+		let cronoagem = parseInt(cronoaged/7/4.5); // Idade cronológica em meses
+		let cronoagea = parseInt(cronoaged/7/4.5/12); // Idade cronológica em anos
+		
+		
+		diferenca_dia = (input1da - input1dn);
+		diferenca_mes = (input2da - input2dn);
+		diferenca_ano = (input3da - input3dn);
+		
+			
+		if(diferenca_dia<0){
+			diferenca_dia=30+diferenca_dia;
+			diferenca_mes--;
+		} 
+		
+		if(diferenca_mes<0) {
+			diferenca_mes=12+diferenca_mes;
+			diferenca_ano--;
+		} 
+		
+		
+				
+		if(cronoagem>=24){
+		cronoagem = (cronoagem - 24);
+		}else if(cronoagem>=12){
+		cronoagem = (cronoagem - 12);
+		}
+		
+		let correctages = parseInt((cronoaged/7)-(40-input1ign)); // Idade corrigida em semanas
+		let correctagem = parseInt(cronoaged/7/4.5); // Idade corrigida em meses
+		let correctagea = parseInt(cronoaged/7/4.5/12); // Idade corrigida em anos
+		
+		
+		let novadtnasciment = new Date((dtnascimento.getTime() + ((40-input1ign)*1000 * 60 * 60 *24*7)));
+		
+		let novadtnascimento = (dtnascimento.getTime() + ((40-input1ign)*(1000 * 60 * 60 * 24*7)));
+		
+		novadtnascimento = new Date(novadtnascimento);
+		
+		let diferenca_dia_c = ((input1da - novadtnascimento.getDate()));
+		let diferenca_mes_c = (input2da - (novadtnascimento.getMonth()+1));
+		let diferenca_ano_c = (input3da - novadtnascimento.getFullYear());
+
+		if(diferenca_dia_c<0){
+			diferenca_dia_c=30+diferenca_dia_c;
+			diferenca_mes_c--;
+		} 
+		
+		if(diferenca_mes_c<0) {
+			diferenca_mes_c=12+diferenca_mes_c;
+			diferenca_ano_c--;
+		} 
+		
+		
+		//ZONA DE EXIBIÇÃO
+		
+		
+		
+		if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0){
+		
+		var r = window.document.getElementById('caixai')//atribuição de local
+		var txtarea = window.document.getElementById('textarea')
+		textarea.value=(' Idade corrigida:\n' + diferenca_ano_c +' anos e ' + diferenca_mes_c + ' meses.\n\nIdade cronológica:\n'+ diferenca_ano +' anos e ' + diferenca_mes + ' meses');
+				
+		}
+		}//function
+	</script>
+</br>
+</br>
+</br>
+</br>
+<p id="links"><span ><a href="https://alamgenio.wixsite.com/transformsolucoes">WEB SITE</a></span><span ><a href="https://instagram.com/transform.solucoes">Instagram</a></span></p>
+</br>	
+</br>	
+</br>
+
+<div id="autoria">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Thais Costa Machado Florence²</b> </br>
+¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
+²Doutora em Ciências, programa de Saúde Pública pela Faculdade de Saúde Pública da USP,  docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+
+</br></br>Icon made by Smashicons  https://www.flaticon.com/authors/smashicons from www.flaticon.com ADAPTED</div></br></br>
+
+<p id="lastupdated"> &nbsp;Última atualização em: 06/06/2021</p>
+
+<footer>
+	
+	© Copyright 2021 UNEB - Todos os direitos reservados.
+	
+</footer>
+	
+  
+</div>		
+
+			
+	
+</body>
+</html>
