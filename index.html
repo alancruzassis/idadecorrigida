@@ -570,9 +570,9 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			
 		cronoaged = (cronoaged /(1000 * 60 * 60 * 24)); // Idade cronológica em dias
 		
-		let cronoages = parseInt(cronoaged/7); // Idade cronológica em semanas
-		let cronoagem = parseInt(cronoaged/7/4.5); // Idade cronológica em meses
-		let cronoagea = parseInt(cronoaged/7/4.5/12); // Idade cronológica em anos
+		//let cronoages = parseInt(cronoaged/7); // Idade cronológica em semanas
+		//let cronoagem = parseInt(cronoaged/7/4.5); // Idade cronológica em meses
+		//let cronoagea = parseInt(cronoaged/7/4.5/12); // Idade cronológica em anos
 		
 		
 		diferenca_dia = (input1da - input1dn);
@@ -598,16 +598,16 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		
 		
 				
-		if(cronoagem>=24){
-		cronoagem = (cronoagem - 24);
-		}else if(cronoagem>=12){
-		cronoagem = (cronoagem - 12);
-		}
+		//if(cronoagem>=24){
+		//cronoagem = (cronoagem - 24);
+		//}else if(cronoagem>=12){
+		//cronoagem = (cronoagem - 12);
+		//}
 		
 		//Idade corrigida
-		let correctages = parseInt((cronoaged/7)-(40-input1ign)); // Idade corrigida em semanas
-		let correctagem = parseInt(cronoaged/7/4.5); // Idade corrigida em meses
-		let correctagea = parseInt(cronoaged/7/4.5/12); // Idade corrigida em anos
+		//let correctages = parseInt((cronoaged/7)-(40-input1ign)); // Idade corrigida em semanas
+		//let correctagem = parseInt(cronoaged/7/4.5); // Idade corrigida em meses
+		//let correctagea = parseInt(cronoaged/7/4.5/12); // Idade corrigida em anos
 		
 		
 		let novadtnasciment = new Date((dtnascimento.getTime() + ((40-input1ign)*1000 * 60 * 60 *24*7)));
@@ -665,9 +665,10 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 </br>	
 </br>
 
-<div id="autoria">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Thais Costa Machado Florence²</b> </br>
+<div id="autoria">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana...³ </b> </br>
 ¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
-²Doutora em Ciências, programa de Saúde Pública pela Faculdade de Saúde Pública da USP,  docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+³Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
 
 </br></br></div></br>
 <div id="autoria">REFERÊNCIAS:</br></br>
