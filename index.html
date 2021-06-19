@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
 
-	<title>Idade Corrigida - UNEB</title>
+	<title>NEODATE - UNEB</title>
 	<style>
 		* {
     margin: 0;
@@ -63,10 +63,10 @@
 			position:relative;
 			left:11px;
 			width: 250px;
-			top: 145px;
+			top: 105px;
 			border: 2px solid #0066B3;
 			padding-bottom: 0px;
-			margin-top: 10px;
+			margin-top: 1px;
 			border-radius: 10px;
 			background-color: white;
 		}
@@ -277,8 +277,7 @@
 	height: 100%;
 	float: left;
 	padding: 0px;
-	
-	top: 10px;
+	top: 0px;
 	margin-top: 0px;
 	}
 	
@@ -302,10 +301,10 @@
 		line-height:150px;
 		width: 90%;
 		height: 90%;
-		font: normal 30pt Arial;
+		font: normal 28pt Arial;
 		color: #27314d;
 		border-radius: 5px;
-		line-height: 2em;
+		line-height: 1.2em;
 		text-shadow: 0.5px 0.5px 0.5px black;
 		padding-left: 25px;
 		}
@@ -350,7 +349,7 @@
 		position: relative;
 		margin-top: 0px;
 		padding: 0px;
-		top: 0px;
+		top: -20px;
 		width: 90%;
 		height: 90%;
 		}
@@ -374,11 +373,10 @@
 			color: white;
 			text-shadow: 0.5px 0.5px 0px gray;
 			bottom:0;
-			width:100%;
+			width:101%;
 			left: 0px;
-			right: 0px;
 			min-width: 100%;
-			background-color: #0066B3;
+			background-color: #951ABE;
 			
 			padding-top: 15px;
 			padding-bottom: 15px;
@@ -488,8 +486,8 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 <div class="general">
 <div class="cabecalho">
 	<hgroup>
-	<h1 id="h1">Idade Corrigida - UNEB</h1> 
-	<h2>Correção da Idade da Criança Nascida Pré-termo</h2>
+	<h1 id="h1">NEODATE - UNEB</h1> 
+	<h2>Correção da Idade Gestacional da Criança Nascida Pré-termo</h2>
 	</hgroup>
 	<img src="logo.png"
 	alt="Logotipo"
@@ -503,11 +501,11 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		<form method="get" id="fCalculo" action="none" oninput="resultado()"  onchange="resultado()" onclick="resultado()">
 			
 			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
-			<p id="pri"><label for="cVolp"><b>Data do atendimento: </b></label></br><input class="dia" id="input1da" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2da" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3da" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
+			<p id="pri"><label for="input1da"><b>Data do atendimento: </b></label></br><input class="dia" id="input1da" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2da" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3da" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
 			</fieldset>
 			
 			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
-			<p id="pri2"><label for="cConcp"><b>Data do nascimento: </b></label></br> <input id="input1dn" class="dia" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2dn" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3dn" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
+			<p id="pri2"><label for="input1dn"><b>Data do nascimento: </b></label></br> <input id="input1dn" class="dia" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2dn" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3dn" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
 						
 						
 			</fieldset>
@@ -515,7 +513,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			
 			
 			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
-			<p id="pri5"><label for="cVola"><b>IG ao nascimento: </b></label></br> <input class="dia" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28"></input> semanas</p>
+			<p id="pri5"><label for="input1ign"><b>IG ao nascimento: </b></label></br> <input class="dia" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28"></input> semanas </br><input class="dia" id="input2ign" type="number"  maxlength="2" max="40" placeholder="Ex: 3"></input> dias</p>
 			</fieldset>
 			<br>
 				
@@ -526,7 +524,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		
 	<div id="div">
 	<div class="flex-box">
-	<textarea id="textarea"  readonly ><<PREENCHA OS CAMPOS AO LADO </textarea>
+	<textarea id="textarea"  readonly >←PREENCHA OS CAMPOS AO LADO </textarea>
 	</div>
 	</div>
 </div>	
@@ -544,6 +542,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		let input3dn = document.getElementById('input3dn');
 		
 		let input1ign = document.getElementById('input1ign');
+		let input2ign = document.getElementById('input2ign');
 				
 		//ATRIBUIÇÃO DE VALOR
 		input1da = input1da.value; //dia atendimento
@@ -554,8 +553,9 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		input2dn = input2dn.value; //mes nascimento
 		input3dn = input3dn.value; //ano nascimento
 					
-		input1ign = input1ign.value; //dia dum
-				
+		input1ign = input1ign.value; //semanas ig
+		input2ign = input2ign.value; //dias ig
+		
 		// FORMATAÇÃO DE DATA AAAA/MM/DD
 		let dtatendimento = input3da + '/' + input2da + '/' + input1da;
 		let dtnascimento = input3dn + '/' + input2dn + '/' + input1dn;
@@ -609,10 +609,11 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		//let correctagem = parseInt(cronoaged/7/4.5); // Idade corrigida em meses
 		//let correctagea = parseInt(cronoaged/7/4.5/12); // Idade corrigida em anos
 		
+		let diasforadoutero = ((input2ign*1000 * 60 * 60 *24) + ((40-input1ign)*1000 * 60 * 60 *24*7));
 		
-		let novadtnasciment = new Date((dtnascimento.getTime() + ((40-input1ign)*1000 * 60 * 60 *24*7)));
+		let novadtnascimento = new Date((dtnascimento.getTime() + (diasforadoutero)));
 		
-		let novadtnascimento = (dtnascimento.getTime() + ((40-input1ign)*(1000 * 60 * 60 * 24*7)));
+		//let novadtnasciment = (dtnascimento.getTime() + ((40-input1ign)*(1000 * 60 * 60 * 24*7)));
 		
 		novadtnascimento = new Date(novadtnascimento);
 		
@@ -625,10 +626,10 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			diferenca_mes_c--;
 		} 
 		
-		if(diferenca_dia_c>=15){
+		/*if(diferenca_dia_c>=15){
 			diferenca_dia_c=1;
 			diferenca_mes_c++;
-		} //...
+		} */
 		
 		if(diferenca_mes_c<0) {
 			diferenca_mes_c=12+diferenca_mes_c;
@@ -636,27 +637,28 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		} 
 		
 		
+		let novadatanascimento = novadtnascimento.getDate() + '/' + (novadtnascimento.getMonth()+1) + '/' + novadtnascimento.getFullYear()
+		
 		//ZONA DE EXIBIÇÃO
 		
 		
 		
-		if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0){
+		if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0&&diasforadoutero>=0){
 		
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
-		textarea.value=(' Idade corrigida:\n' + diferenca_ano_c +' anos e ' + diferenca_mes_c + ' meses.\n\nIdade cronológica:\n'+ diferenca_ano +' anos e ' + diferenca_mes + ' meses');
+		textarea.value=('Idade corrigida:\n' + diferenca_ano_c +'a, ' + diferenca_mes_c + 'm e ' + diferenca_dia_c + 'd\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade em dias: ' + (diasforadoutero/(1000 * 60 * 60 *24)) + '\nNova data de nascimento: ' + novadatanascimento);
 				
 		}else{
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
-		textarea.value=('<<PREENCHA OS CAMPOS AO LADO');
+		textarea.value=('←PREENCHA OS CAMPOS AO LADO');
 		}//else
 		}//function
 	</script>
 </br>
 </br><div id="texto">A correção da idade cronológica da criança nascida pré-matura é fundamental para o correto diagnóstico do desenvolvimento nos primeiros anos de vida, pois, para um prematuro de 28 semanas, por exemplo, não utilizar a idade corrigida aos 2 anos implica 12% de diferença no desempenho em testes de desenvolvimento, o que leva à classificação incorreta.
 </br>Para os prematuros de muito baixo peso e com menos de 28 semanas, recomenda-se corrigir a idade até os 3 anos. A idade corrigida traduz o ajuste da idade cronológica em função do grau de prematuridade.(RUGOLO, 2005)
-</br>Idades corrigida e crológica calculadas com base na regra dos 15 dias: a partir de 15 dias de diferença já se considera 1 mês. Ex: Criança nascida em 17/06/2020, atendida em 01/06/2021 se considera idade cronológica de 11 meses. Bem como criança nascida em 18/05/2020 atendida no mesmo dia tem mesma idade que criança nascida em 01/06/2021: 1 ano.
 </div>
 </br>
 </br>
@@ -665,10 +667,10 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 </br>	
 </br>
 
-<div id="autoria">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana...³ </b> </br>
+<div id="autoria">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </b> </br>
 ¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
 ²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br> 
-³Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+³Médica Neonatologista pela Universidade Federal de São Paulo - UNIFESP, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
 
 </br></br></div></br>
 <div id="autoria">REFERÊNCIAS:</br></br>
@@ -676,7 +678,7 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 </br></div>
 </br>
 
-<p id="lastupdated"> &nbsp;Última atualização em: 13/06/2021</p>
+<p id="lastupdated"> &nbsp;Última atualização em: 19/06/2021</p>
 
 <footer>
 	
