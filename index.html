@@ -31,20 +31,20 @@
 		h1 {
 			font-family: 'Roboto', Arial;
 			font-size: 50pt;
-			color: #2C5FAC;
+			color: #9400d3;
 			position: absolute;
-			left: 154px;
+			left: 174px;
 			top: 14px;
 			padding: 0px;
 			margin-top: 0px;
-			
+			letter-spacing: 5px;
 			}
 		h2 {
 			font-family: Helvetica;
 			font-size: 18pt;
-			color: #951ABE;
+			color: #9966cc;
 			position: absolute;
-			left:158px;
+			left:178px;
 			top: 100px;
 			
 			}
@@ -73,7 +73,7 @@
 		img{
 			position: absolute;
 			top:15px;
-			left: 10px;
+			left: 35px;
 			margin: 0px;
 			margin-top:0px;
 			padding: 0px;
@@ -363,6 +363,7 @@
 		width: calc(100% - 40px);
 		min-width: 250px;
 		left: 0px;
+		border-color: #9966cc;
 		}
 		
 		footer{
@@ -444,6 +445,7 @@
 		margin-bottom: 15px;
 		}
 		
+			
 		#autoria{
 		text-align: justify;
 		display: block;
@@ -486,7 +488,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 <div class="general">
 <div class="cabecalho">
 	<hgroup>
-	<h1 id="h1">NEODATE - UNEB</h1> 
+	<h1 id="h1">NEODATE</h1> 
 	<h2>Correção da Idade Gestacional da Criança Nascida Pré-termo</h2>
 	</hgroup>
 	<img src="logo.png"
@@ -500,11 +502,11 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 
 		<form method="get" id="fCalculo" action="none" oninput="resultado()"  onchange="resultado()" onclick="resultado()">
 			
-			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<fieldset ><legend ><strong></strong></legend>
 			<p id="pri"><label for="input1da"><b>Data do atendimento: </b></label></br><input class="dia" id="input1da" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2da" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3da" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
 			</fieldset>
 			
-			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<fieldset ><legend ><strong></strong></legend>
 			<p id="pri2"><label for="input1dn"><b>Data do nascimento: </b></label></br> <input id="input1dn" class="dia" type="number"  maxlength="2" max="31" placeholder="DD"></input> <input id="input2dn" class="mes" type="number"  maxlength="2" max="12" placeholder="MM"></input> <input id="input3dn" class="ano" type="number"  maxlength="4" placeholder="AAAA"></input></p>
 						
 						
@@ -512,7 +514,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			
 			
 			
-			<fieldset ><legend style="color: #27314d"><strong></strong></legend>
+			<fieldset ><legend ><strong></strong></legend>
 			<p id="pri5"><label for="input1ign"><b>IG ao nascimento: </b></label></br> <input class="dia" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28"></input> semanas </br><input class="dia" id="input2ign" type="number"  maxlength="2" max="6" placeholder="0"></input> dias</p>
 			</fieldset>
 			<br>
@@ -657,8 +659,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		}//function
 	</script>
 </br>
-</br><div id="texto">A correção da idade cronológica da criança nascida pré-matura é fundamental para o correto diagnóstico do desenvolvimento nos primeiros anos de vida, pois, para um prematuro de 28 semanas, por exemplo, não utilizar a idade corrigida aos 2 anos implica 12% de diferença no desempenho em testes de desenvolvimento, o que leva à classificação incorreta.
-</br>Para os prematuros de muito baixo peso e com menos de 28 semanas, recomenda-se corrigir a idade até os 3 anos. Assim, a idade corrigida é o ajuste da idade cronológica da criança de acordo com o grau de prematuridade.(RUGOLO, 2005)
+</br><div id="texto">A correção da idade cronológica da criança nascida pré-matura é fundamental para o correto diagnóstico do desenvolvimento nos primeiros anos de vida. A não utilização dessa correção implica em erro no diagnóstico.(RUGOLO, 2005)
 </div>
 </br>
 </br>
