@@ -205,16 +205,12 @@
 		a{
 		text-decoration: none;
 		font-size: 16px;
-		color:  #2c5fac;
+		color:  #9400D3;
 		background-color: white;
 		padding: 19px 27px;
 		border-style: solid;
 		border-width: 2px;
-		border-top-color: #337FED;
-		border-right-color: #337FED;
-		border-bottom-color: #337FED;
-		border-left-color: #337FED;
-		
+		border-color: #9400D3;
 		border-radius: 29px;
 		margin-right: 15px;
 		cursor: pointer;
@@ -671,13 +667,13 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
-		textarea.value=('Idade corrigida:\n' +antesde40w+ ' semanas e '+antesde40d+'d\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nFaltaram ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd para 40 sem.\n\nCompleta 40s em: ' + novadatanascimento);
+		textarea.value=('Idade corrigida:\n' +antesde40w+ ' semanas e '+antesde40d+'d\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nFaltaram ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd para nascer com 40s\n\nCompleta 40s em: ' + novadatanascimento);
 		
 		}else if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0&&diasforadoutero>=0){
 		
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
-		textarea.value=('Idade corrigida:\n' + diferenca_ano_c +'a, ' + diferenca_mes_c + 'm e ' + diferenca_dia_c + 'd\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nFaltaram ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd para 40 sem.\n\nCompletou 40s em: ' + novadatanascimento);
+		textarea.value=('Idade corrigida:\n' + diferenca_ano_c +'a, ' + diferenca_mes_c + 'm e ' + diferenca_dia_c + 'd\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nFaltaram ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd nascer com 40s\n\nCompletou 40s em: ' + novadatanascimento);
 				
 		}else{
 		var r = window.document.getElementById('caixai')//atribuição de local
