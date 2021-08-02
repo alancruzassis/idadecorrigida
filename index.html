@@ -454,8 +454,8 @@
 		
 			
 		#autoria{
-		color: gray;
 		text-align: justify;
+		color: gray;
 		display: block;
 		width: 90%;
 		font-family: Consolas, arial;
@@ -613,9 +613,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			diferenca_mes=12+diferenca_mes;
 			diferenca_ano--;
 		} 
-		
-		
-				
+								
 		//if(cronoagem>=24){
 		//cronoagem = (cronoagem - 24);
 		//}else if(cronoagem>=12){
@@ -664,16 +662,40 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		let antesde40w = parseInt(antesde40/7);
 		let antesde40d = parseInt(antesde40%7);
 		
-		//ZONA DE EXIBIÇÃO
+		let maiorde2a = 0
+		if(diferenca_mes_c>0){
+		maiorde2a=1
+		}
+		maiorde2a = diferenca_ano_c + maiorde2a
 		
-		if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
+		//DISPLAY AREA
 		
+		if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input2ign>6){
+		var r = window.document.getElementById('caixai')//atribuição de local
+		var txtarea = window.document.getElementById('textarea')
+		textarea.value=('Insira um valor entre 0 e 6 em dia(s)');
+		
+		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
+		var r = window.document.getElementById('caixai')//atribuição de local
+		var txtarea = window.document.getElementById('textarea')
+		textarea.value=('Data de Nascimento maior que a Data de Atendimento');
+		
+		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
+		var r = window.document.getElementById('caixai')//atribuição de local
+		var txtarea = window.document.getElementById('textarea')
+		textarea.value=('Criança maior de 2a, correção é desnecessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		
+		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
+		var r = window.document.getElementById('caixai')//atribuição de local
+		var txtarea = window.document.getElementById('textarea')
+		textarea.value=('Criança não prematura\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		
+		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
 		textarea.value=('Idade corrigida:\n' +antesde40w+ ' semanas e '+antesde40d+'d\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade de ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd\n\nCompleta 40s em: ' + novadatanascimento);
 		
-		}else if (input1da>0&&input2da>0&&input3da>0&&input1dn>0&&input2dn>0&&input3dn>0&&input1ign>0&&diasforadoutero>=0){
-		
+		}else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0){
 		var r = window.document.getElementById('caixai')//atribuição de local
 		var txtarea = window.document.getElementById('textarea')
 		textarea.value=('Idade corrigida:\n' + diferenca_ano_c +'a, ' + diferenca_mes_c + 'm e ' + diferenca_dia_c + 'd\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade de ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd\n\nCompletou 40s em: ' + novadatanascimento);
@@ -706,7 +728,7 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 </span></br></div>
 </br>
 
-<p id="lastupdated">Última atualização em: 31/07/2021</p>
+<p id="lastupdated">Última atualização em: 01/08/2021</p>
 
 <footer>
 	
