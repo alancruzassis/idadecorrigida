@@ -32,13 +32,12 @@
 	body{
 	display: flex;
 	flex-direction: column;
-	flex-grow:1;
 	}
 		
-		.general{
+		/*.general{
 		padding: 0px;
 		margin: 0px;
-		}
+		}*/
 		
 		h1 {
 			font-family: 'Montserrat','Roboto', Arial;
@@ -375,13 +374,12 @@
 		}
 		
 		footer{
-			flex-shrink:0;
 			font-family: Arial;
 			font-size: 15pt;
 			font-weight: bold;
 			color: white;
 			text-shadow: 0.5px 0.5px 0px gray;
-			bottom:0;
+			
 			width:100%;
 			left: 0px;
 			min-width: 100%;
@@ -391,7 +389,6 @@
 			text-align: center;
 			margin: 0;
 			border: 0;
-			top: calc(100%);
 			}
 		
 		
@@ -493,8 +490,8 @@
 		display: none;
 		}
 		
-		#content{
-		flex: 1 0 auto;
+		.site-content{
+		flex-grow:1;
 		}
 		
 	</style>
@@ -502,12 +499,11 @@
 	
 	
 </head>
-<body>
+<body class="site">
 
 <script>
 window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins QUE leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis em alancruzassis.wixsite.com/neodate), QUE atende aos pré-requisitos neles dispostos, QUE cumprirá os termos neles acordados e QUE aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
 </script>
-<div class="general">
 <div class="cabecalho">
 	<hgroup>
 	<h1 id="h1">NEODATE</h1> 
@@ -518,7 +514,8 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 	width="120px"
 	>
 </div>	
-<section id="content">
+<div class="site-content">
+<div class="bg2">
 <div class="flex-box container-box" id="flexform">
 <div class="form">
 
@@ -756,7 +753,9 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 
 <p id="lastupdated">Última atualização em: 08/08/2021</p>
 </br></br>
-</section>
+</div>
+</div>
+
 <footer>
 	
 	© Copyright 2021 UNEB - Todos os direitos reservados.
