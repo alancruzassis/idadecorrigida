@@ -24,14 +24,18 @@
     padding: 0;
 	}
 	html{height:10%;}
-		body{height:100%;
-		min-height: 100%;}
+	body{
+	height:100%;
+	min-height:100vh;
+	}
+	
+	body{
+	display: flex;
+	flex-direction: column;
+	flex-grow:1;
+	}
 		
 		.general{
-		position:relative;
-		height: 100%;
-		width: 100%;
-		min-height:100%;
 		padding: 0px;
 		margin: 0px;
 		}
@@ -371,7 +375,7 @@
 		}
 		
 		footer{
-			position: relative;
+			flex-shrink:0;
 			font-family: Arial;
 			font-size: 15pt;
 			font-weight: bold;
@@ -382,7 +386,6 @@
 			left: 0px;
 			min-width: 100%;
 			background-color: #951ABE;
-			
 			padding-top: 15px;
 			padding-bottom: 15px;
 			text-align: center;
@@ -471,24 +474,27 @@
 		}
 		
 		
-		.footer{
-		position: relative;
-		padding:0px;
-		margin: 0px;
-		display: flex;
-		align-items: center;
-		left: 0px;
-		bottom: 0px;
-		float: bottom;
-		width: 100%;
-		}
-		
+				
 		.description{
 		font-size:8pt;
 		}
 		
 		.names{
 		font-size:10pt;
+		}
+		
+		#btnLerMais{
+		cursor: pointer;
+		padding-right: 3px;
+		padding-left: 3px;
+		}
+		
+		#maisTexto{
+		display: none;
+		}
+		
+		#content{
+		flex: 1 0 auto;
 		}
 		
 	</style>
@@ -512,7 +518,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 	width="120px"
 	>
 </div>	
-
+<section id="content">
 <div class="flex-box container-box" id="flexform">
 <div class="form">
 
@@ -620,8 +626,9 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		//cronoagem = (cronoagem - 12);
 		//}
 		
-		//Idade corrigida
+		//IDADE CORRIGIDA
 		//let correctages = parseInt((cronoaged/7)-(40-input1ign)); // Idade corrigida em semanas
+		//let correctaged = cronoaged  // Idade corrigida em dias
 		//let correctagem = parseInt(cronoaged/7/4.5); // Idade corrigida em meses
 		//let correctagea = parseInt(cronoaged/7/4.5/12); // Idade corrigida em anos
 		
@@ -632,6 +639,8 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		//let novadtnasciment = (dtnascimento.getTime() + ((40-input1ign)*(1000 * 60 * 60 * 24*7)));
 		
 		novadtnascimento = new Date(novadtnascimento);
+		
+		let correctaged = cronoaged - diasforadoutero // Idade corrigida em dias (1, 2, 50 dias)
 		
 		let diferenca_dia_c = ((input1da - novadtnascimento.getDate()));
 		let diferenca_mes_c = (input2da - (novadtnascimento.getMonth()+1));
@@ -657,7 +666,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		
 		
 		let antesde40 = parseFloat(cronoaged + (input1ign*7));
-		antesde40 = antesde40 + input2ign*1;
+		antesde40 = antesde40 + input2ign*1;//antesde40 = idade cronológica em dias + idade gestacional em dias
 		
 		let antesde40w = parseInt(antesde40/7);
 		let antesde40d = parseInt(antesde40%7);
@@ -707,8 +716,22 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		}//else
 		}//function
 	</script>
+	<script>
+	function lerMais(){
+	var maisTexto = document.getElementById('maisTexto');
+	var btnLerMais = document.getElementById("btnLerMais");
+	
+	if(maisTexto.style.display==="inline"){
+	maisTexto.style.display="none";
+	btnLerMais.innerHTML="&#709;";
+	} else{
+	maisTexto.style.display="inline";
+	btnLerMais.innerHTML="&#708;";
+	}
+	}
+	</script>
 </br>
-</br><div id="texto">A correção da idade cronológica da criança nascida pré-matura é fundamental para o correto diagnóstico do desenvolvimento nos primeiros anos de vida. A não utilização dessa correção implica em erro no diagnóstico.(RUGOLO, 2005)
+</br><div id="texto">A correção da idade cronológica da criança nascida prematura é fundamental para o correto diagnóstico do desenvolvimento nos primeiros anos de vida. A não utilização dessa correção implica em erro no diagnóstico.(RUGOLO, 2005)
 </div>
 </br>
 </br>
@@ -717,19 +740,23 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 </br>	
 </br>
 
-<div id="autoria"><span class="names">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b> </br><span class="description">
+<div id="autoria"><span class="names">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b>
+<button onclick="lerMais()" id="btnLerMais">&#709;</button>
+</br><span id="maisTexto"class="description">
 ¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
 ²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br> 
 ³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediadria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
 </span>
-</br></br></div></br>
+</br></br>
+</div></br>
 <div id="autoria"><span class="description">REFERÊNCIAS:</br></br>
 RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. J. Pediatr. (Rio J.) 81 (1 suppl 1). Mar 2005. https://doi.org/10.1590/S0021-75572005000200013
 </span></br></div>
-</br>
+</br></br>
 
-<p id="lastupdated">Última atualização em: 01/08/2021</p>
-
+<p id="lastupdated">Última atualização em: 08/08/2021</p>
+</br></br>
+</section>
 <footer>
 	
 	© Copyright 2021 UNEB - Todos os direitos reservados.
