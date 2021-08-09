@@ -255,8 +255,8 @@
 	margin-top: 0px;
 	margin-left: 0px;
 	margin-right: 0px;
-	position: relative;
 	height: 150px;
+	min-height: 150px;
 	display: flex;
 		flex-direction: column;
 		justify-content: space-around;
@@ -343,6 +343,7 @@
 		}
 		
 		#flexform{
+		position: relative;
 		display: flex;
 		  align-items: center;
 		  justify-content: space-around;
@@ -490,6 +491,12 @@
 		display: none;
 		}
 		
+		.site{
+		display: flex;
+		flex-direction: column;
+		min-height:100vh;
+		}
+		
 		.site-content{
 		flex-grow:1;
 		}
@@ -505,14 +512,15 @@
 window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins QUE leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis em alancruzassis.wixsite.com/neodate), QUE atende aos pré-requisitos neles dispostos, QUE cumprirá os termos neles acordados e QUE aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
 </script>
 <div class="cabecalho">
+<div>
 	<hgroup>
 	<h1 id="h1">NEODATE</h1> 
 	<h2>Correção da Idade Gestacional da Criança Nascida Pré-termo</h2>
 	</hgroup>
 	<img src="logo.png"
 	alt="Logotipo"
-	width="120px"
-	>
+	width="120px">
+</div>
 </div>	
 <div class="site-content">
 <div class="bg2">
