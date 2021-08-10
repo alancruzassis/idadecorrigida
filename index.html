@@ -24,9 +24,9 @@
     padding: 0;
 	}
 	html{height:10%;}
+	
 	body{
 	height:100%;
-	min-height:100vh;
 	}
 	
 	body{
@@ -100,7 +100,7 @@
 			
 		
 		p#copyright{
-		font: normal 16pt Arial;
+		font: normal 15pt Arial;
 		color:white;
 		text-align:center;
 		}
@@ -108,31 +108,31 @@
 		
 		
 		p#pri{
-		width: 120%;
+		width: 100%;
 		font-size:22pt;
 		color: #542080;
 		
 		}
 		p#pri2{
-		width: 120%;
+		width: 100%;
 		font-size:22pt;
 		color: #542080;
 		
 		}
 		p#pri3{
-		width: 120%;
+		width: 100%;
 		font-size:22pt;
 		color: #542080;
 		
 		}
 		p#pri4{
-		width: 120%;
+		width: 100%;
 		font-size:22pt;
 		color: #542080;
 		
 		}
 		p#pri5{
-		width: 120%;
+		width: 100%;
 		font-size:22pt;
 		color: #542080;
 		
@@ -478,7 +478,7 @@
 		}
 		
 		.names{
-		font-size:10pt;
+		
 		}
 		
 		#btnLerMais{
@@ -593,7 +593,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		dtnascimento = new Date(dtnascimento);
 		
 		
-		//CÁLCULO
+		//CALCULATION AREA
 		//Idade cronológica
 		let cronoaged = dtatendimento.getTime() - dtnascimento.getTime()// Idade cronológica em milesegundos
 			
@@ -614,23 +614,12 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			diferenca_mes--;
 		} 
 		
-		/*if(diferenca_dia>=15){
-			diferenca_dia=1;
-			diferenca_mes++;
-		}*/ //...
-		
-		
 		if(diferenca_mes<0) {
 			diferenca_mes=12+diferenca_mes;
 			diferenca_ano--;
 		} 
 								
-		//if(cronoagem>=24){
-		//cronoagem = (cronoagem - 24);
-		//}else if(cronoagem>=12){
-		//cronoagem = (cronoagem - 12);
-		//}
-		
+				
 		//IDADE CORRIGIDA
 		//let correctages = parseInt((cronoaged/7)-(40-input1ign)); // Idade corrigida em semanas
 		//let correctaged = cronoaged  // Idade corrigida em dias
@@ -656,11 +645,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			diferenca_mes_c--;
 		} 
 		
-		/*if(diferenca_dia_c>=15){
-			diferenca_dia_c=1;
-			diferenca_mes_c++;
-		} */
-		
+				
 		if(diferenca_mes_c<0) {
 			diferenca_mes_c=12+diferenca_mes_c;
 			diferenca_ano_c--;
@@ -722,7 +707,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		}//function
 	</script>
 	<script>
-	function lerMais(){
+	function lerMais(){ //Expandir/Retrair texto descrição dos autores
 	var maisTexto = document.getElementById('maisTexto');
 	var btnLerMais = document.getElementById("btnLerMais");
 	
@@ -745,7 +730,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 </br>
 
 <div id="autoria"><span class="names">AUTORES:</br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b>
-<button onclick="lerMais()" id="btnLerMais">&#709;</button>
+<button onclick="lerMais()" id="btnLerMais" style="font-size:12pt;">&#709;</button>
 </br><span id="maisTexto"class="description">
 ¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
 ²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br> 
@@ -758,15 +743,15 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 </span></br></div>
 </br></br>
 
-<p id="lastupdated">Última atualização em: 08/08/2021</p>
+<p id="lastupdated">Última atualização em: 10/08/2021</p>
 </br></br>
 </div>
 </div>
 
 <footer>
-	
+	<div>
 	© Copyright 2021 UNEB - Todos os direitos reservados.
-	
+	</div>
 </footer>
 	
   
