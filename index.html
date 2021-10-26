@@ -4,6 +4,7 @@
 <!--© Copyright Alan da Cruz Assis da Silva; Dra. Luciana Ferreira da Silva e Dra. Tatiana Ribeiro Maciel-->
 	<meta charset="UTF-8"/>
 	<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+	
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-53MZEDFE95"></script>
 <script>
@@ -436,6 +437,133 @@
 		flex-grow:1;
 		}
 		
+		#sliderBox{
+		width: 100%; 
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 30px;
+		}
+		
+		#slider{
+		width: 500px;
+		background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(37,34,38,1) 6%, rgba(119,113,121,1) 7%, rgba(156,145,162,1) 21%, rgba(149,26,190,1) 41%, rgba(249,187,0,1) 42%, rgba(250,201,0,1) 69%, rgba(255,252,2,1) 70%, rgba(209,212,86,1) 83%, rgba(155,198,108,1) 84%, rgba(0,211,7,1) 100%);
+		}
+		
+		input[type=range] {
+		  width: 100%;
+		  margin: 12.8px 0;
+		  background-color: transparent;
+		  -webkit-appearance: none;
+		}
+		input[type=range]:focus {
+		  outline: none;
+		}
+		input[type=range]::-webkit-slider-runnable-track {
+		  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(37,34,38,1) 6%, rgba(119,113,121,1) 7%, rgba(156,145,162,1) 21%, rgba(149,26,190,1) 41%, rgba(249,187,0,1) 42%, rgba(250,201,0,1) 69%, rgba(255,252,2,1) 70%, rgba(209,212,86,1) 83%, rgba(155,198,108,1) 84%, rgba(0,211,7,1) 100%);
+		  border: 0.2px solid #010101;
+		  border-radius: 1.3px;
+		  width: 100%;
+		  height: 8.4px;
+		  cursor: pointer;
+		}
+		input[type=range]::-webkit-slider-thumb {
+		  margin-top: -13px;
+		  width: 8px;
+		  height: 34px;
+		  background: #ffffff;
+		  border: 1px solid #000000;
+		  border-radius: 3px;
+		  cursor: pointer;
+		  -webkit-appearance: none;
+		}
+		input[type=range]:focus::-webkit-slider-runnable-track {
+		  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(37,34,38,1) 6%, rgba(119,113,121,1) 7%, rgba(156,145,162,1) 21%, rgba(149,26,190,1) 41%, rgba(249,187,0,1) 42%, rgba(250,201,0,1) 69%, rgba(255,252,2,1) 70%, rgba(209,212,86,1) 83%, rgba(155,198,108,1) 84%, rgba(0,211,7,1) 100%);
+		}
+		input[type=range]::-moz-range-track {
+		  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(37,34,38,1) 6%, rgba(119,113,121,1) 7%, rgba(156,145,162,1) 21%, rgba(149,26,190,1) 41%, rgba(249,187,0,1) 42%, rgba(250,201,0,1) 69%, rgba(255,252,2,1) 70%, rgba(209,212,86,1) 83%, rgba(155,198,108,1) 84%, rgba(0,211,7,1) 100%);
+		  border: 0.2px solid #010101;
+		  border-radius: 1.3px;
+		  width: 100%;
+		  height: 8.4px;
+		  cursor: pointer;
+		}
+		input[type=range]::-moz-range-thumb {
+		  width: 8px;
+		  height: 34px;
+		  background: #ffffff;
+		  border: 1px solid #000000;
+		  border-radius: 3px;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-track {
+		  background: transparent;
+		  border-color: transparent;
+		  border-width: 13.8px 0;
+		  color: transparent;
+		  width: 100%;
+		  height: 8.4px;
+		  cursor: pointer;
+		}
+		input[type=range]::-ms-fill-lower {
+		  background: #a2619f;
+		  border: 0.2px solid #010101;
+		  border-radius: 2.6px;
+		}
+		input[type=range]::-ms-fill-upper {
+		  background: #ab71a9;
+		  border: 0.2px solid #010101;
+		  border-radius: 2.6px;
+		}
+		input[type=range]::-ms-thumb {
+		  width: 8px;
+		  height: 34px;
+		  background: #ffffff;
+		  border: 1px solid #000000;
+		  border-radius: 3px;
+		  cursor: pointer;
+		  margin-top: 0px;
+		  /*Needed to keep the Edge thumb centred*/
+		}
+		input[type=range]:focus::-ms-fill-lower {
+		  background: #ab71a9;
+		}
+		input[type=range]:focus::-ms-fill-upper {
+		  background: #b481b3;
+		}
+		/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+		how to remove the virtical space around the range input in IE*/
+		@supports (-ms-ime-align:auto) {
+		  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+		  input[type=range] {
+			margin: 0;
+			/*Edge starts the margin from the thumb, not the track as other browsers do*/
+		  }
+		}
+
+		.css-input {
+			 padding: 5px;
+			 font-size: 16px;
+			 background-color: transparent;
+			 color: #951ABE;
+			 border: none !important;;
+			text-shadow: -50px 0px 0px rgba(66,66,66,.0);
+		}
+		 .css-input:focus {
+			 outline:none;
+		}
+
+
+		#typeBox{
+		width: 100%; 
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-bottom: 2px;
+		margin-top: 10px;
+		text-align: center;
+		}
+		
 		@media (min-width: 700px){
 		
 			#flexform{
@@ -505,7 +633,7 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 			
 			
 			<fieldset ><legend ><strong></strong></legend>
-			<p id="pri5"><label for="input1ign"><b>IG ao nascimento: </b></label></br> <input class="dia inputs" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28" onkeyup="PressEnter('input2ign');"></input> semanas </br><input class="dia inputs" id="input2ign" type="number"  maxlength="2" max="6" placeholder="0"></input> dia(s)</p>
+			<p id="pri5"><label for="input1ign"><b>IG ao nascimento: </b></label></br> <input class="dia inputs" id="input1ign" type="number"  maxlength="2" max="40" placeholder="Ex: 28" onkeyup="PressEnter('input2ign');" oninput="linhaPretermo();"></input> semanas </br><input class="dia inputs" id="input2ign" type="number"  maxlength="2" max="6" placeholder="0" oninput="linhaPretermo();"></input> dia(s)</p>
 			</fieldset>
 			<br>
 				
@@ -685,15 +813,63 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 	</script>
 	<script type="text/javascript">
 
-	function PressEnter(nextinputId){
-	    if(event.keyCode == 13){
-		document.getElementById(nextinputId).focus();     
-		return false;           
-	    }
+function PressEnter(nextinputId){
+    if(event.keyCode == 13){
+        document.getElementById(nextinputId).focus();     
+        return false;           
+    }
+}
+</script>
+
+<script type="text/javascript">
+
+function linhaPretermo(){
+    var weekPosition = document.getElementById('input1ign');
+	var dayPosition = document.getElementById('input2ign');
+	var inputText = document.getElementById('inputText');
+		
+	weekPosition = weekPosition.value;
+	dayPosition = dayPosition.value;
+	inputText = inputText.value;
+	
+	var position = (weekPosition*7) + (dayPosition*1);
+	
+		var slider = window.document.getElementById('slider')
+		slider.value=(position);
+		
+	if(position>0&&position>=238&&position<=258){
+		var inputText = window.document.getElementById('inputText')
+		inputText.value=("Prematuridade tardia");
+	} else if(position>0&&position>=224&&position<=258){
+		var inputText = window.document.getElementById('inputText')
+		inputText.value=("Prematuridade moderada");
+	}else if(position>0&&position>=196&&position<=258){
+		var inputText = window.document.getElementById('inputText')
+		inputText.value=("Muito pré-termo");
+	}else if(position>0&&position<196){
+		var inputText = window.document.getElementById('inputText')
+		inputText.value=("Prematuridade extrema");
+	} else{ 
+		var inputText = window.document.getElementById('inputText')
+		inputText.value=("Grau de Prematuridade");
 	}
-	</script>
+	
+}
+</script>
+
 </br>
-</br>
+
+<div id="typeBox">
+<input id="inputText" type="text" class="css-input" value="Grau de Prematuridade" disabled>
+</div>
+
+<div id="sliderBox">
+<input id="slider" type="range" name="myInput" step="1" value="0" min="153" max="258" disabled>
+</div>
+
+
+
+
 </br>
 </br>
 <p id="links"><span ><a href="https://alancruzassis.wixsite.com/neodate/" target="_blank">Nosso Site</a></span><span ><a href="https://www.instagram.com/neodate.uneb/" target="_blank">Instagram</a></span><span><a href="https://forms.gle/qZoys6wytNxGWrog9" target="_blank">&#9733; Avaliar</a></span></p>
@@ -715,7 +891,7 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 </span></br></div>
 </br></br>
 
-<p id="lastupdated">Última atualização em: 17/10/2021</p>
+<p id="lastupdated">Última atualização em: 12/08/2021</p>
 </br></br>
 </div>
 </div>
