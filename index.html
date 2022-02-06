@@ -603,7 +603,7 @@
 	
 	
 </head>
-<body class="site">
+<body class="site" onload="hoje()">
 
 <script>
 window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins QUE leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis em alancruzassis.wixsite.com/neodate), QUE atende aos pré-requisitos neles dispostos, QUE cumprirá os termos neles acordados e QUE aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
@@ -803,6 +803,27 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 		}//else
 		}//function
 	</script>
+	
+	<script>
+	function hoje() {
+	
+	let input1da = document.getElementById('input1da');
+	let input2da = document.getElementById('input2da');
+	let input3da = document.getElementById('input3da');
+	
+	let now = new Date;
+	
+	let hojeD = now.getDate();
+	let hojeM = (now.getMonth()+1);
+	let hojeA = now.getFullYear(); 
+	
+	input1da.value = hojeD; 
+	input2da.value = hojeM; 
+	input3da.value = hojeA;
+	
+	}
+	</script>
+	
 	<script>
 	function lerMais(){ //Expandir/Retrair texto descrição dos autores
 	var maisTexto = document.getElementById('maisTexto');
@@ -897,7 +918,7 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 </span></br></div>
 </br></br>
 
-<p id="lastupdated">Última atualização em: 05/02/2022</p>
+<p id="lastupdated">Última atualização em: 06/02/2022</p>
 </br></br>
 </div>
 </div>
@@ -915,3 +936,4 @@ RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. 
 	
 </body>
 </html>
+
