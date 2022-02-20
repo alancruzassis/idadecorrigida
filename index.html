@@ -166,7 +166,7 @@
 		font-size: 16px;
 		color:  #9400D3;
 		background-color: white;
-		padding: 19px 27px;
+		padding: 15px 23px;
 		border-style: solid;
 		border-width: 2px;
 		border-color: #9400D3;
@@ -277,10 +277,9 @@
 		height: 750px;
 		padding: 5px;
 		box-sizing: border-box;
-		margin: 0px:
+		margin: 0px;
 		border-radius: 25px;
 		top:0px;
-		
 		}
 		
 		#flexform{
@@ -434,6 +433,21 @@
 		display: none;
 		}
 		
+		#btnLerMais2{
+		font-size:22px;
+		cursor: pointer;
+		color: purple;
+		font-weight: bold;
+		background-color: transparent;
+		border: none;
+		padding-right: 3px;
+		padding-left: 3px;
+		}
+		
+		#maisTexto2{
+		display: none;
+		}
+
 		.site{
 		display: flex;
 		flex-direction: column;
@@ -845,6 +859,22 @@ window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos
 	}
 	}
 	</script>
+
+<script>
+	function lerMais2(){ //Expandir/Retrair texto descrição dos autores
+	var maisTexto2 = document.getElementById('maisTexto2');
+	var btnLerMais2 = document.getElementById("btnLerMais2");
+	
+	if(maisTexto2.style.display==="inline"){
+	maisTexto2.style.display="none";
+	btnLerMais2.innerHTML="&#9660;";
+	} else{
+	maisTexto2.style.display="inline";
+	btnLerMais2.innerHTML="&#9650;";
+	}
+	}
+	</script>
+
 	<script type="text/javascript">
 
 function PressEnter(nextinputId){
@@ -920,12 +950,13 @@ function linhaPretermo(){
 </span>
 </br></br>
 </div></br>
-<div id="autoria"><span class="description">REFERÊNCIAS:</br></br>
+<div id="autoria"><span class="description">REFERÊNCIAS:<button onclick="lerMais2()" id="btnLerMais2" >&#9660;</button>
+</br></br><span id="maisTexto2"class="description">
 RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. J. Pediatr. (Rio J.) 81 (1 suppl 1). Mar 2005. https://doi.org/10.1590/S0021-75572005000200013
 </span></br></div>
 </br></br>
 
-<p id="lastupdated">Última atualização em: 06/02/2022</p>
+<p id="lastupdated">Última atualização em: 20/02/2022</p>
 </br></br>
 </div>
 </div>
