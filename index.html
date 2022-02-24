@@ -783,38 +783,38 @@
 		//DISPLAY AREA
 		
 		if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input2ign>6){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Insira um valor entre 0 e 6 em dia(s)');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Data de Nascimento maior que a Data de Atendimento');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Criança maior de 2a, correção é desnecessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Criança não prematura\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Idade corrigida:\n' +antesde40w+ ' semanas e '+antesde40d+'d\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade de ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd\n\nCompleta 40s em: ' + novadatanascimento);
 		
 		}else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0){
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('Idade corrigida:\n' + diferenca_ano_c +'a, ' + diferenca_mes_c + 'm e ' + diferenca_dia_c + 'd\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade de ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd\n\nCompletou 40s em: ' + novadatanascimento);
 				
 		}else{
-		var r = window.document.getElementById('caixai')//atribuição de local
-		var txtarea = window.document.getElementById('textarea')
+		let r = window.document.getElementById('caixai')//atribuição de local
+		let txtarea = window.document.getElementById('textarea')
 		textarea.value=('← PREENCHA OS CAMPOS');
 		}//else
 		}//function
@@ -842,8 +842,8 @@
 	
 	<script>
 	function lerMais(){ //Expandir/Retrair texto descrição dos autores
-	var maisTexto = document.getElementById('maisTexto');
-	var btnLerMais = document.getElementById("btnLerMais");
+	let maisTexto = document.getElementById('maisTexto');
+	let btnLerMais = document.getElementById("btnLerMais");
 	
 	if(maisTexto.style.display==="inline"){
 	maisTexto.style.display="none";
@@ -857,8 +857,8 @@
 
 <script>
 	function lerMais2(){ //Expandir/Retrair texto descrição dos autores
-	var maisTexto2 = document.getElementById('maisTexto2');
-	var btnLerMais2 = document.getElementById("btnLerMais2");
+	let maisTexto2 = document.getElementById('maisTexto2');
+	let btnLerMais2 = document.getElementById("btnLerMais2");
 	
 	if(maisTexto2.style.display==="inline"){
 	maisTexto2.style.display="none";
@@ -883,33 +883,33 @@ function PressEnter(nextinputId){
 <script type="text/javascript">
 
 function linhaPretermo(){
-    var weekPosition = document.getElementById('input1ign');
-	var dayPosition = document.getElementById('input2ign');
-	var inputText = document.getElementById('inputText');
+    let weekPosition = document.getElementById('input1ign');
+	let dayPosition = document.getElementById('input2ign');
+	let inputText = document.getElementById('inputText');
 		
 	weekPosition = weekPosition.value;
 	dayPosition = dayPosition.value;
 	inputText = inputText.value;
 	
-	var position = (weekPosition*7) + (dayPosition*1);
+	let position = (weekPosition*7) + (dayPosition*1);
 	
-		var slider = window.document.getElementById('slider')
+		let slider = window.document.getElementById('slider')
 		slider.value=(position);
 		
 	if(position>0&&position>=238&&position<=258){
-		var inputText = window.document.getElementById('inputText')
+		let inputText = window.document.getElementById('inputText')
 		inputText.value=("Prematuridade tardia");
 	} else if(position>0&&position>=224&&position<=258){
-		var inputText = window.document.getElementById('inputText')
+		let inputText = window.document.getElementById('inputText')
 		inputText.value=("Prematuridade moderada");
 	}else if(position>0&&position>=196&&position<=258){
-		var inputText = window.document.getElementById('inputText')
+		let inputText = window.document.getElementById('inputText')
 		inputText.value=("Muito pré-termo");
 	}else if(position>0&&position<196){
-		var inputText = window.document.getElementById('inputText')
+		let inputText = window.document.getElementById('inputText')
 		inputText.value=("Prematuridade extrema");
 	} else{ 
-		var inputText = window.document.getElementById('inputText')
+		let inputText = window.document.getElementById('inputText')
 		inputText.value=("Grau de Prematuridade");
 	}
 	
@@ -952,7 +952,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Última atualização em: 22/02/2022</p>
+	<p id="lastupdated">Última atualização em: 24/02/2022</p>
 	</br>
 	</br>
 	</div>
