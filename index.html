@@ -5,6 +5,7 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 		
+		
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-53MZEDFE95"></script>
 	<script>
@@ -367,12 +368,16 @@
 		color: gray;
 		display: block;
 		width: 90%;
-		font-family: Consolas, arial;
-		font-size: clamp(0.2em, 0.6em + 0.6vw, 1.5em);
+		font-family: arial;
+		font-size: 13px;
 		left: 10px;
 		margin-left: 4%;
 		}
 		
+		.autoria b{
+		font-size: 14px;
+		}
+
 		#texto{
 		text-align: justify;
 		width: 90%;
@@ -399,6 +404,8 @@
 		
 		#maisTexto{
 		display: none;
+		font-size: 0.7em;
+		line-height: 1.4;
 		}
 		
 		#btnLerMais2{
@@ -555,8 +562,7 @@
 		margin-bottom: 5px;
 		}
 		
-		
-		
+			
 		
 	</style>
 	
@@ -870,21 +876,28 @@ function linhaPretermo(){
 	</br>	
 	</br>
 	</br>
-	<section class="autoria"><span class="names"><strong>AUTORES:<strong></br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b>
-	<button onclick="lerMais()" id="btnLerMais" >&#9660;</button>
-	</br><span id="maisTexto"class="description">
-	¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
-	²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br> 
-	³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediadria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
-	</span>
-	</br></br>
+	<section class="autoria">
+			<span class="names">
+				<strong>AUTORES:</strong>
+				</br></br>
+				<b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³</b>
+			</span>
+			<button onclick="lerMais()" id="btnLerMais" >&#9660;</button>
+		</br>
+		<span id="maisTexto"class="description">
+			¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br></br>
+			²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br></br> 
+			³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediadria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+		</span>
+		</br></br>
 	</section></br>
-	<div class="autoria"><span class="description">REFERÊNCIAS:<button onclick="lerMais2()" id="btnLerMais2" >&#9660;</button>
-	</br></br>
-	<span id="maisTexto2"class="description">
-		RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. J. Pediatr. (Rio J.) 81 (1 suppl 1). Mar 2005. https://doi.org/10.1590/S0021-75572005000200013
-	</span>
-	</br>
+	<div class="autoria">
+		<span class="description"><strong>REFERÊNCIAS:</strong></span><button onclick="lerMais2()" id="btnLerMais2" >&#9660;</button>
+		</br></br>
+		<span id="maisTexto2"class="description">
+			RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. J. Pediatr. (Rio J.) 81 (1 suppl 1). Mar 2005. https://doi.org/10.1590/S0021-75572005000200013
+		</span>
+		</br>
 	</div>
 	</br>
 	</br>
