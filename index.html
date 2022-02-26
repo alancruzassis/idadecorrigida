@@ -73,7 +73,7 @@
 		
 		p {
 			font-family: Arial;
-			font-size: 15pt;
+			font-size: 14px;
 			color: black;
 			position:relative;
 			left:11px;
@@ -109,45 +109,12 @@
 		}
 		
 		
-		
-		p#pri{
+		p#pri, p#pri2, p#pri3, p#pri4, p#pri5, #pri6{
 		width: 100%;
-		font-size:22pt;
-		color: #542080;
-		
-		}
-		p#pri2{
-		width: 100%;
-		font-size:22pt;
-		color: #542080;
-		
-		}
-		p#pri3{
-		width: 100%;
-		font-size:22pt;
-		color: #542080;
-		
-		}
-		p#pri4{
-		width: 100%;
-		font-size:22pt;
-		color: #542080;
-		
-		}
-		p#pri5{
-		width: 100%;
-		font-size:22pt;
-		color: #542080;
-		
-		}
-		p#pri6{
-		width: 100%;
-		font-size:22pt;
+		font-size:29px;
 		color: #542080;
 		}
 		
-		
-				
 		a{
 		text-decoration: none;
 		font-size: 16px;
@@ -169,7 +136,7 @@
       border-color: #BC00FA;
     }
 	input:not(:placeholder-shown) {
-      border: 1px inset #f1f1f1;
+      border: 2px inset #cfcfcf;
     }
 	
 	.cabecalho{
@@ -243,7 +210,47 @@
 		box-sizing: border-box;
 		border-radius: 5px;
 		}
+
+		textarea::selection{
+			background: #521d7e;
+            color: #fff;
+		}
 		
+		h1::selection{
+			background: #951ABE;
+            color: #fff;
+		}
+
+		h2::selection{
+			background: #951ABE;
+            color: #fff;
+		}
+
+		p::selection{
+			background: #ffffff;
+            color: #951ABE;
+		}
+
+		strong::selection{
+			background: #ffffff;
+            color: #951ABE;
+		}
+
+		b::selection{
+			background: #ffffff;
+            color: #951ABE;
+		}
+
+		span::selection{
+			background: #521d7e;
+            color: #ffffff;
+		}
+
+		input::selection{
+			background: rgb(241, 165, 241);
+            color: rgb(31, 31, 31);
+		}
+
 		input#caixai{
 		display: none;
 		text-align:center;
@@ -256,7 +263,7 @@
 		
 		fieldset{
 			padding: 14px;
-			margin-bottom: 15px;
+			margin-bottom: 17px;
 			margin-left: 10px;
 			margin-right: 30px;
 			width: 320px;
@@ -278,7 +285,7 @@
 
 		footer{
 			font-family: Arial;
-			font-size: 15pt;
+			font-size: 18px;
 			font-weight: bold;
 			color: white;
 			text-shadow: 0.5px 0.5px 0px gray;
@@ -321,7 +328,7 @@
 		height: 40px;
 		text-align: center;
 		margin-top: 5px;
-		font-size: 18pt;
+		font-size: 24px;
 		margin-bottom: 15px;
 		border-radius: 5px;
 		}
@@ -331,7 +338,7 @@
 		height: 40px;
 		text-align: center;
 		margin-top: 10px;
-		font-size: 18pt;
+		font-size: 24px;
 		margin-bottom: 15px;
 		border-radius: 5px;
 		}
@@ -342,7 +349,7 @@
 		text-align: center;
 		margin-top: 10px;
 		margin-bottom: 15px;
-		font-size: 18pt;
+		font-size: 24px;
 		border-radius: 5px;
 		}
 		
@@ -351,18 +358,17 @@
 		height: 40px;
 		text-align: center;
 		margin-top: 10px;
-		font-size: 18pt;
+		font-size: 24px;
 		margin-bottom: 15px;
 		}
 		
 			
-		#autoria{
-		text-align: justify;
+		.autoria{
 		color: gray;
 		display: block;
 		width: 90%;
 		font-family: Consolas, arial;
-		font-size: 12px;
+		font-size: clamp(0.2em, 0.6em + 0.6vw, 1.5em);
 		left: 10px;
 		margin-left: 4%;
 		}
@@ -376,7 +382,7 @@
 		
 				
 		.description{
-		font-size:8pt;
+		font-size:12px;
 		}
 		
 		
@@ -578,7 +584,7 @@
 
 					<form method="get" id="fCalculo" action="none" oninput="resultado()"  onchange="resultado()" onclick="resultado()">
 						
-						<fieldset ><legend ><strong></strong></legend>
+						<fieldset  class="informacoes"><legend ><strong></strong></legend>
 						<p id="pri"><label for="input1da"><b>Data do atendimento </b></label></br><input class="dia inputs" id="input1da" type="number"  maxlength="2" max="31" placeholder="DD" onkeyup="PressEnter('input2da');"></input> <input id="input2da" class="mes inputs" type="number"  maxlength="2" max="12" placeholder="MM" onkeyup="PressEnter('input3da');"></input> <input id="input3da" class="ano inputs" type="number"  maxlength="4" placeholder="AAAA" onkeyup="PressEnter('input1dn');"></input></p>
 						</fieldset>
 						
@@ -776,11 +782,11 @@
 	let maisTexto = document.getElementById('maisTexto');
 	let btnLerMais = document.getElementById("btnLerMais");
 	
-	if(maisTexto.style.display==="inline"){
+	if(maisTexto.style.display==="inline-block"){
 	maisTexto.style.display="none";
 	btnLerMais.innerHTML="&#9660;";
 	} else{
-	maisTexto.style.display="inline";
+	maisTexto.style.display="inline-block";
 	btnLerMais.innerHTML="&#9650;";
 	}
 	}
@@ -791,11 +797,11 @@
 	let maisTexto2 = document.getElementById('maisTexto2');
 	let btnLerMais2 = document.getElementById("btnLerMais2");
 	
-	if(maisTexto2.style.display==="inline"){
+	if(maisTexto2.style.display==="inline-block"){
 	maisTexto2.style.display="none";
 	btnLerMais2.innerHTML="&#9660;";
 	} else{
-	maisTexto2.style.display="inline";
+	maisTexto2.style.display="inline-block";
 	btnLerMais2.innerHTML="&#9650;";
 	}
 	}
@@ -864,7 +870,7 @@ function linhaPretermo(){
 	</br>	
 	</br>
 	</br>
-	<div id="autoria"><span class="names"><strong>AUTORES:<strong></br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b>
+	<section class="autoria"><span class="names"><strong>AUTORES:<strong></br></br><b>Alan da Cruz Assis da Silva¹; Luciana Ferreira da Silva²; Tatiana Ribeiro Maciel³ </span></b>
 	<button onclick="lerMais()" id="btnLerMais" >&#9660;</button>
 	</br><span id="maisTexto"class="description">
 	¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br>
@@ -872,8 +878,8 @@ function linhaPretermo(){
 	³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediadria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
 	</span>
 	</br></br>
-	</div></br>
-	<div id="autoria"><span class="description">REFERÊNCIAS:<button onclick="lerMais2()" id="btnLerMais2" >&#9660;</button>
+	</section></br>
+	<div class="autoria"><span class="description">REFERÊNCIAS:<button onclick="lerMais2()" id="btnLerMais2" >&#9660;</button>
 	</br></br>
 	<span id="maisTexto2"class="description">
 		RUGOLO, LMSS. Crescimento e desenvolvimento a longo prazo do prematuro extremo. J. Pediatr. (Rio J.) 81 (1 suppl 1). Mar 2005. https://doi.org/10.1590/S0021-75572005000200013
@@ -883,7 +889,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Última atualização em: 25/02/2022</p>
+	<p id="lastupdated">Última atualização em: 26/02/2022</p>
 	</br>
 	</br>
 	</div>
