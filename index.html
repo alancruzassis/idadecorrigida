@@ -4,8 +4,7 @@
 	<!--© Copyright Alan da Cruz Assis da Silva; Dra. Luciana Ferreira da Silva e Dra. Tatiana Ribeiro Maciel-->
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-		
-		
+				
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-53MZEDFE95"></script>
 	<script>
@@ -29,7 +28,7 @@
 
 	<link rel="shortcut icon" href="icon4.ico" >
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+	
 	<title>NEODATE</title>
 	<style>
 	* {
@@ -52,6 +51,13 @@
 		margin: 0px;
 		}*/
 		
+		#enflag{
+			position:absolute; 
+			right:5%;
+			top: 5%;
+			
+		}
+
 		h1 {
 			font-family: 'Montserrat','Roboto', Arial;
 			font-size: 50pt;
@@ -117,7 +123,7 @@
 		color: #542080;
 		}
 		
-		a{
+		.site-content a{
 		text-decoration: none;
 		font-size: 16px;
 		color:  #9400D3;
@@ -580,11 +586,10 @@
 	</script>
 	<header class="cabecalho">
 		<div>
+			<a href="https://alancruzassis.github.io/neodate/en"><img src="enflag.jpeg" alt="Enlish" id="enflag" width="30px"></a>
 			<h1 id="h1">NEODATE</h1> 
 			<h2>Correção da Idade Gestacional da Criança Nascida Pré-termo</h2>
-			<img id="logo" src="logo.png"
-			alt="Logo NEODATE"
-			width="120px">
+			<img id="logo" src="logo.png" alt="Logo NEODATE" width="120px">
 		</div>
 	</header>	
 	<div class="site-content">
@@ -732,22 +737,22 @@
 		if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input2ign>6){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Insira um valor entre 0 e 6 em dia(s)');
+		textarea.value=('Erro: Insira um valor entre 0 e 6 em dia(s)');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Data de Nascimento > Data do Atendimento');
+		textarea.value=('Erro: Data de Nascimento > Data do Atendimento');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Criança > 2 anos, correção não é necessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Erro: Criança > 2 anos, correção não é mais necessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Criança não nasceu pré-termo\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Erro: Criança não nasceu pré-termo\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
 		let r = window.document.getElementById('caixai')//atribuição de local
@@ -891,7 +896,7 @@ function linhaPretermo(){
 		<span id="maisTexto"class="description">
 			¹Estudante de Graduação em Nutrição, Departamento de Ciências da Vida - DCV, Universidade do Estado da Bahia – UNEB, Salvador, Bahia, Brasil.</br></br>
 			²Doutora em Medicina e Saúde pela Universidade Federal da Bahia, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil.</br></br> 
-			³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediadria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
+			³Médica Neonatologista e Pediatra pela Sociedade Brasileira de Pediatria, docente da Universidade do Estado da Bahia – UNEB, Departamento de Ciências  da Vida - DCV, Salvador, Bahia, Brasil. 
 		</span>
 		</br></br>
 	</section></br>
@@ -906,7 +911,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Última atualização em: 06/03/2022</p>
+	<p id="lastupdated">Última atualização em: 09/04/2022</p>
 	</br>
 	</br>
 	</div>
