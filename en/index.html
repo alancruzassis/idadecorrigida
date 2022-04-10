@@ -763,22 +763,22 @@
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Kid over 2 years old, gestational age correction is not requeired anymore.\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Error: Kid over 2 years old, gestational age correction is not requeired anymore.\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Kid is not preterm\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Error: Kid is not preterm\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Corrected age:\n' +antesde40w+ ' semanas e '+antesde40d+'d\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\nPrematuridade de ' + (diasforadoutero/(1000 * 60 * 60 *24)) + 'd\n\nCompleta 40s em: ' + novadatanascimento);
+		textarea.value=('Corrected age:\n' +antesde40w+ ' weeks and '+antesde40d+'d\n\nChronological age:\n' + diferenca_ano + 'y, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd\n\n'+(diasforadoutero/(1000 * 60 * 60 *24))+' days of prematurity\n\nKid will complete 40w on: ' + novadatanascimento);
 		
 		}else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Corrected age:\n' + diferenca_ano_c +'y, ' + diferenca_mes_c + 'm and ' + diferenca_dia_c + 'd\n\nChronological age:\n' + diferenca_ano + 'y, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd\n\n'+ (diasforadoutero/(1000 * 60 * 60 *24)) +' days of prematurity ' + '\n\nCompletou 40w em: ' + novadatanascimento);
+		textarea.value=('Corrected age:\n' + diferenca_ano_c +'y, ' + diferenca_mes_c + 'm and ' + diferenca_dia_c + 'd\n\nChronological age:\n' + diferenca_ano + 'y, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd\n\n'+ (diasforadoutero/(1000 * 60 * 60 *24)) +' days of prematurity ' + '\n\n40w completed on: ' + novadatanascimento);
 				
 		}else{
 		let r = window.document.getElementById('caixai')//atribuição de local
@@ -928,7 +928,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Last updated: 04/09/2022</p>
+	<p id="lastupdated">Last updated: 04/10/2022</p>
 	</br>
 	</br>
 	</div>
