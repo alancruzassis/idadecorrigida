@@ -597,7 +597,7 @@
 					<form method="get" id="fCalculo" action="none" oninput="resultado()"  onchange="resultado()" onclick="resultado()">
 						
 						<fieldset  class="informacoes"><legend ><strong></strong></legend>
-						<p id="pri"><label for="input1da"><b>Date of appointment</b></label>
+						<p id="pri"><label for="input1da"><b>Appointment date</b></label>
 						</br>
 						
 						<input id="input2da" class="mes inputs" type="number"  maxlength="2" max="12" placeholder="MM" onkeyup="PressEnter('input1da');"></input>
@@ -608,7 +608,7 @@
 						</fieldset>
 						
 						<fieldset ><legend ><strong></strong></legend>
-						<p id="pri2"><label for="input1dn"><b>Date of birth</b></label></br> 
+						<p id="pri2"><label for="input1dn"><b>Birth date</b></label></br> 
 														
 							<input id="input2dn" class="mes inputs" type="number"  maxlength="2" max="12" placeholder="MM" onkeyup="PressEnter('input1dn');"></input>
 
@@ -758,7 +758,7 @@
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Date of Appointment must be greater than Date of Birth');
+		textarea.value=('Error: Appointment date must be greater than Birth date');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
 		let r = window.document.getElementById('caixai')//atribuição de local
@@ -928,7 +928,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Last updated: 04/10/2022</p>
+	<p id="lastupdated">Last updated on: 04/10/2022</p>
 	</br>
 	</br>
 	</div>
