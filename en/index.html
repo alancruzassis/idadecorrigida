@@ -755,22 +755,22 @@
 		if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input2ign>6){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: "day(s)" must receive a number between 0 and 6');
+		textarea.value=('Something went wrong :(\n\n"day(s)" must receive a number between 0 and 6');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Appointment date must be greater than Birth date');
+		textarea.value=('Something went wrong :(\n\nAppointment date must be greater than Birth date');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Kid over 2 years old, gestational age correction is not requeired anymore.\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
+		textarea.value=('Something went wrong :(\n\nKid over 2 years old, gestational age correction is not requeired anymore.\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Error: Kid is not preterm\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
+		textarea.value=('Something went wrong :(\n\nKid is not preterm\n\nChronological age:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm and '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
 		let r = window.document.getElementById('caixai')//atribuição de local
