@@ -744,22 +744,22 @@
 		if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input2ign>6){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Erro: Insira um valor entre 0 e 6 em dia(s)');
+		textarea.value=('Algo deu errado :(\n\nInsira um valor entre 0 e 6 em dia(s)');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&dtatendimento<dtnascimento){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Erro: Data de Nascimento > Data do Atendimento');
+		textarea.value=('Algo deu errado :(\n\nData de Nascimento > Data do Atendimento');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&maiorde2a>2){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Erro: Criança > 2 anos, correção não é mais necessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Algo deu errado :(\n\nCriança > 2 anos, correção não é mais necessária.\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&input1ign>=37){
 		let r = window.document.getElementById('caixai')//atribuição de local
 		let txtarea = window.document.getElementById('textarea')
-		textarea.value=('Erro: Criança não nasceu pré-termo\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
+		textarea.value=('Algo deu errado :(\n\nCriança não nasceu pré-termo\n\nIdade cronológica:\n' + diferenca_ano + 'a, ' + diferenca_mes + 'm e '+ diferenca_dia + 'd');
 		
 		} else if (input1da>0&&input2da>0&&input3da>999&&input1dn>0&&input2dn>0&&input3dn>999&&input1ign>0&&diasforadoutero>=0&&antesde40<=280){
 		let r = window.document.getElementById('caixai')//atribuição de local
