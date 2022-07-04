@@ -14,6 +14,7 @@
 
 	gtag('config', 'G-53MZEDFE95');
 	</script>
+	
 		
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,6 +33,7 @@
 
 	<link rel="shortcut icon" href="icon4.ico" >
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	
 	
 	<title>NEODATE</title>
 	<style>
@@ -583,7 +585,7 @@
 		}
 		
 		/* Slideshow container */
-.slideshow-container {
+#slideshow-container {
   max-width: 1000px;
   position: relative;
   margin: auto;
@@ -668,12 +670,13 @@
   to {opacity: 1}
 }	
 		
+.hide{display:none;}
 	</style>
 	
 	
 	
 </head>
-<body class="site" onload="hoje()">
+<body class="site" onload="hoje()" >
 
 	<script>
 	window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins QUE leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis em alancruzassis.github.io/neodate/termos.pdf), QUE atende aos pré-requisitos neles dispostos, QUE cumprirá os termos neles acordados e QUE aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
@@ -883,9 +886,24 @@
 	input2da.value = hojeM; 
 	input3da.value = hojeA;
 	
+	
+	
+
 	}
+
+	
 	</script>
 	
+	<script>
+		
+		setTimeout(function(){
+			var x = document.getElementById('slideshow-container');
+			x.style.display="block"; //Remove hide
+		},40000);
+
+		
+	</script>
+
 	<script>
 	function lerMais(){ //Expandir/Retrair texto descrição dos autores
 	let maisTexto = document.getElementById('maisTexto');
@@ -1005,7 +1023,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Última atualização em: 10/04/2022</p>
+	<p id="lastupdated">Última atualização em: 04/07/2022</p>
 	</br>
 	</br>
 	</div>
@@ -1013,7 +1031,7 @@ function linhaPretermo(){
 
 
 	<!-- Slideshow container -->
-<div class="slideshow-container">
+<div id="slideshow-container" style="display: none;">
 
 	<!-- Full-width images with number and caption text -->
 	<div class="mySlides fade">
@@ -1064,6 +1082,7 @@ function showSlides() {
   setTimeout(showSlides, 8000); // Change image every 8 seconds
 }
   </script>
+
 
 
 	<footer>
