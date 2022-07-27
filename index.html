@@ -34,6 +34,14 @@
 	<link rel="shortcut icon" href="icon4.ico" >
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	
+	<script>
+		
+			setTimeout(function(){
+				const splash = document.querySelector('.splash');
+				splash.classList.add('display-none');
+			},10000);
+		
+	</script>
 	
 	<title>NEODATE</title>
 	<style>
@@ -43,6 +51,8 @@
 	}
 	html{height:10%;}
 	
+
+
 	body{
 	height:100%;
 	}
@@ -51,7 +61,113 @@
 	display: flex;
 	flex-direction: column;
 	}
+	
+	
+
+	.splash{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #9400D3;
+		color: #FAFAFA;
+		z-index: 200;
+		text-align: center;
 		
+	}
+
+	.splash img{
+		width: 90px;
+	}
+
+	.rotate-center {
+	-webkit-animation: rotate-center 5s steps(24, end) infinite reverse both;
+	        animation: rotate-center 5s steps(24, end) infinite reverse both;
+	}
+	
+	@-webkit-keyframes rotate-center {
+		0% {
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+		}
+	}
+	@keyframes rotate-center {
+		0% {
+			-webkit-transform: rotate(0);
+					transform: rotate(0);
+		}
+		100% {
+			-webkit-transform: rotate(360deg);
+					transform: rotate(360deg);
+		}
+	}
+
+
+	.conjunto-splash{
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		width: 80%;
+		font-size: 2em;
+		gap: 60px;
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.conjunto-splash h1{
+		font-family: 'Montserrat','Roboto', Arial;
+    	font-size: 100px;
+		letter-spacing: 17px;
+	}
+	
+	.conjunto-splash p{
+		font-size: 25px;
+    	
+	}
+
+	.conjunto-splash a{
+		color: white;
+		text-decoration: underline;
+		font-weight: 100;
+	}
+
+	.splash.display-none{
+		position: fixed;
+		opacity: 0;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-color: #9400D3;
+		color: #FAFAFA;
+		z-index: -1000;
+		text-align: center;
+		line-height: 90vh;
+		transition: all 1s;
+	}
+
+	@keyframes fadeIn{
+		to{
+			opacity: 1;
+		}
+	}
+
+	.fade-in{
+		opacity: 0;
+		animation: fadeIn 1s ease-in forwards;
+	}
+	
 		/*.general{
 		padding: 0px;
 		margin: 0px;
@@ -69,7 +185,7 @@
 		}
 
 
-		h1 {
+		.cabecalho h1 {
 			font-family: 'Montserrat','Roboto', Arial;
 			font-size: 50pt;
 			color: #9400d3;
@@ -80,7 +196,7 @@
 			margin-top: 0px;
 			letter-spacing: 17px;
 			}
-		h2 {
+		.cabecalho h2{
 			font-family: 'Open Sans Condensed',Helvetica;
 			font-size: 17pt;
 			color: #9966cc;
@@ -90,7 +206,7 @@
 			
 			}
 		
-		p {
+		.site-content p {
 			font-family: Arial;
 			font-size: 14px;
 			color: black;
@@ -677,15 +793,30 @@
 	
 </head>
 <body class="site" onload="hoje()" >
-
-	<script>
-	window.alert("BEM-VINDO(A)!\n\nAo fechar este aviso você atesta para os devidos fins QUE leu e concorda com os TERMOS E CONDIÇÕES DE USO (disponíveis em alancruzassis.github.io/neodate/termos.pdf), QUE atende aos pré-requisitos neles dispostos, QUE cumprirá os termos neles acordados e QUE aceita os cookies deste site. Caso você não concorde (ou não puder cumprir) com os acordos você deve sair da página e não poderá ter acesso ao conteúdo.")
-	</script>
+	<div class="splash">
+		
+		<div class="fade-in conjunto-splash">
+			<div>
+				<img class="rotate-center" src="NEODATE_arrows.png" alt="setas">
+			</div>
+			<div>
+				<h3>Bem-vindo(a) ao</h3>
+			</div>
+			<div>
+				<h1>NEODATE</h1>
+			</div>
+			<div>
+				<h5>Estamos perparando tudo para você!</h5>
+				<p >Ao continuar você atesta que leu e concorda com os nossos <a href="https://alancruzassis.github.io/neodate/termos.pdf">termos de uso</a> e <a href="https://alancruzassis.wixsite.com/neodate/sobre">cookies</a>.</p>
+			</div>
+		</div>
+	</div>
+	
 	<header class="cabecalho">
 		<div>
 			<abbr title="English - USA"><a href="https://alancruzassis.github.io/neodate/en"><img src="enflag.jpeg" alt="English - USA" id="langFlag"></a></abbr>
 			<h1 id="h1">NEODATE</h1> 
-			<h2>Correção da Idade Gestacional da Criança Nascida Pré-termo</h2>
+			<h2>Correção da Idade Gestacional do Pré-termo</h2>
 			<img id="logo" src="logo.png" alt="Logo NEODATE" width="120px">
 		</div>
 	</header>	
@@ -1023,7 +1154,7 @@ function linhaPretermo(){
 	</br>
 	</br>
 
-	<p id="lastupdated">Última atualização em: 04/07/2022</p>
+	<p id="lastupdated">Última atualização em: 27/07/2022</p>
 	</br>
 	</br>
 	</div>
@@ -1035,33 +1166,26 @@ function linhaPretermo(){
 
 	<!-- Full-width images with number and caption text -->
 	<div class="mySlides fade">
-	  <div class="numbertext">1 / 3</div>
-	  <img src="slideshow neodate 1.png" style="width:100%">
+	  	  <img src="slideshow neodate 1.png" style="width:100%">
 	</div>
   
 	<div class="mySlides fade">
-	  <div class="numbertext">2 / 3</div>
-	  <img src="slideshow neodate 2.png" style="width:100%">
+	  	  <img src="slideshow neodate 2.png" style="width:100%">
 	</div>
   
 	<div class="mySlides fade">
-	  <div class="numbertext">3 / 3</div>
-	  <img src="slideshow neodate 3.png" style="width:100%">
+	 	  <img src="slideshow neodate 3.png" style="width:100%">
 	</div>
   
 	<div class="mySlides fade">
-		<div class="numbertext">3 / 3</div>
 		<img src="slideshow neodate 4.png" style="width:100%">
 	</div>
 
 	<div class="mySlides fade">
-		<div class="numbertext">3 / 3</div>
 		<img src="slideshow neodate 5.png" style="width:100%">
 	</div>
 
-	<!-- Next and previous buttons -->
-	<!--<a style="background-color: transparent; border-color: transparent; color: gray;" class="prev" onclick="plusSlides(-1)">&#10094;</a>
-	<a style="background-color: transparent; border-color: transparent; color: gray;" class="next" onclick="plusSlides(1)">&#10095;</a> -->
+	
   </div>
   <br>
   
